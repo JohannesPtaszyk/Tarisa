@@ -1,0 +1,58 @@
+[versions]
+# Shared
+kotlin = "1.8.20"
+compose = "1.4.1"
+composeGradle = "1.4.1"
+composeCompiler = "1.4.8"
+ksp = "1.8.20-1.0.10"
+voyager = "1.0.0-rc05"
+kotlinInject = "0.6.1"
+
+# Android
+androidMinSdk = "24"
+androidTargetSdk = "33"
+androidCompileSdk = "33"
+androidGradlePlugin = "7.4.2"
+androidxActivityCompose = "1.6.1"
+androidxAppCompat = "1.6.1"
+androidxCoreKtx = "1.9.0"
+androidGradle = "8.0.2"
+
+# Desktop
+
+# iOS
+iosDevelopmentTarget = "14.1"
+
+[libraries]
+# Shared
+kotlin-inject-runtime = { group="me.tatarka.inject", name="kotlin-inject-runtime", version.ref = "kotlinInject"}
+kotlin-inject-compiler = { group="me.tatarka.inject", name="kotlin-inject-compiler-ksp", version.ref = "kotlinInject"}
+voyager-navigator = { group = "cafe.adriel.voyager", name = "voyager-navigator", version.ref = "voyager" }
+voyager-bottomsheet-navigator = { group = "cafe.adriel.voyager", name = "voyager-bottom-sheet-navigator", version.ref = "voyager" }
+voyager-transitions = { group = "cafe.adriel.voyager", name = "voyager-transitions", version.ref = "voyager" }
+
+# Android
+androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "androidxActivityCompose" }
+androidx-app-compat = { group = "androidx.appcompat", name = "appcompat", version.ref = "androidxAppCompat" }
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "androidxCoreKtx" }
+
+# Desktop
+
+# iOS
+
+[plugins]
+# Shared
+kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+compose = { id = "org.jetbrains.compose", version.ref = "composeGradle" }
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+
+# Android
+android-library = { id = "com.android.library", version.ref = "androidGradle" }
+android-application = { id = "com.android.application", version.ref = "androidGradle" }
+
+# Desktop
+
+# iOS
+cocoapods = { id = "org.jetbrains.kotlin.native.cocoapods", version.ref = "kotlin" }

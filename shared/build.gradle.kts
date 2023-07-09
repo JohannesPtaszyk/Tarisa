@@ -1,8 +1,9 @@
 plugins {
-    kotlin("multiplatform")
-    kotlin("native.cocoapods")
-    id("com.android.library")
-    id("org.jetbrains.compose")
+    id(libs.plugins.kotlin.multiplatform.get().pluginId)
+    id(libs.plugins.cocoapods.get().pluginId)
+    id(libs.plugins.android.library.get().pluginId)
+    id(libs.plugins.ksp.get().pluginId)
+    id(libs.plugins.compose.get().pluginId)
 }
 
 kotlin {
@@ -16,9 +17,9 @@ kotlin {
 
     cocoapods {
         version = "1.0.0"
-        summary = "Some description for the Shared Module"
-        homepage = "Link to the Shared Module homepage"
-        ios.deploymentTarget = "14.1"
+        summary = "Tarisa App"
+        homepage = "https://pott.dev"
+        ios.deploymentTarget = libs.versions.iosDevelopmentTarget.get()
         podfile = project.file("../iosApp/Podfile")
         framework {
             baseName = "shared"
@@ -35,13 +36,17 @@ kotlin {
                 implementation(compose.material)
                 @OptIn(org.jetbrains.compose.ExperimentalComposeLibrary::class)
                 implementation(compose.components.resources)
+                implementation(libs.kotlin.inject.runtime)
+                implementation(libs.voyager.bottomsheet.navigator)
+                implementation(libs.voyager.navigator)
+                implementation(libs.voyager.transitions)
             }
         }
         val androidMain by getting {
             dependencies {
-                api("androidx.activity:activity-compose:1.6.1")
-                api("androidx.appcompat:appcompat:1.6.1")
-                api("androidx.core:core-ktx:1.9.0")
+                api(libs.androidx.activity.compose)
+                api(libs.androidx.app.compat)
+                api(libs.androidx.core.ktx)
             }
         }
         val iosX64Main by getting
@@ -61,17 +66,30 @@ kotlin {
     }
 }
 
+dependencies {
+    listOf(
+        "kspDesktop",
+        "kspAndroid",
+        "kspIosX64",
+        "kspIosArm64",
+        "kspIosSimulatorArm64"
+    ).forEach {
+        add(it, libs.kotlin.inject.compiler)
+    }
+}
+
+
 android {
-    compileSdk = (findProperty("android.compileSdk") as String).toInt()
-    namespace = "com.myapplication.common"
+    compileSdk = libs.versions.androidCompileSdk.get().toInt()
+    namespace = "dev.pott.tarisa"
 
     sourceSets["main"].manifest.srcFile("src/androidMain/AndroidManifest.xml")
     sourceSets["main"].res.srcDirs("src/androidMain/res")
     sourceSets["main"].resources.srcDirs("src/commonMain/resources")
 
     defaultConfig {
-        minSdk = (findProperty("android.minSdk") as String).toInt()
-        targetSdk = (findProperty("android.targetSdk") as String).toInt()
+        minSdk = libs.versions.androidMinSdk.get().toInt()
+        targetSdk = libs.versions.androidTargetSdk.get().toInt()
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
