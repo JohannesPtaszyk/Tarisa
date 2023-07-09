@@ -5,7 +5,7 @@ compose = "1.4.1"
 composeGradle = "1.4.1"
 composeCompiler = "1.4.8"
 ksp = "1.8.20-1.0.10"
-voyager = "1.0.0-rc05"
+voyager = "1.0.0-rc06"
 kotlinInject = "0.6.1"
 
 # Android
