@@ -15,7 +15,7 @@ androidCompileSdk = "33"
 androidGradlePlugin = "7.4.2"
 androidxActivityCompose = "1.6.1"
 androidxAppCompat = "1.6.1"
-androidxCoreKtx = "1.9.0"
+androidxCoreKtx = "1.10.1"
 androidGradle = "8.0.2"
 
 # Desktop
