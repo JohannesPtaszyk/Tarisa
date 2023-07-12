@@ -1,7 +1,7 @@
 plugins {
-    kotlin("multiplatform")
-    id("com.android.application")
-    id("org.jetbrains.compose")
+    id(libs.plugins.kotlin.multiplatform.get().pluginId)
+    id(libs.plugins.compose.get().pluginId)
+    id(libs.plugins.android.application.get().pluginId)
 }
 
 kotlin {
@@ -22,7 +22,7 @@ android {
     sourceSets["main"].manifest.srcFile("src/androidMain/AndroidManifest.xml")
 
     defaultConfig {
-        applicationId = "dev.pott.focus"
+        applicationId = "dev.pott.focus" // legacy application id from old app name 😪
         minSdk = libs.versions.androidMinSdk.get().toInt()
         targetSdk = libs.versions.androidTargetSdk.get().toInt()
         versionCode = 1
