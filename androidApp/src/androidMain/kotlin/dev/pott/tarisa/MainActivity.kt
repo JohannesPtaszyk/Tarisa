@@ -1,4 +1,4 @@
-package com.myapplication
+package dev.pott.tarisa
 
 import MainView
 import android.os.Bundle

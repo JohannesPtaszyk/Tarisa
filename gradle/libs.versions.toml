@@ -13,9 +13,9 @@ androidMinSdk = "24"
 androidTargetSdk = "33"
 androidCompileSdk = "33"
 androidGradlePlugin = "7.4.2"
-androidxActivityCompose = "1.6.1"
+androidxActivityCompose = "1.7.2"
 androidxAppCompat = "1.6.1"
-androidxCoreKtx = "1.9.0"
+androidxCoreKtx = "1.10.1"
 androidGradle = "8.0.2"
 
 # Desktop
@@ -25,8 +25,8 @@ iosDevelopmentTarget = "14.1"
 
 [libraries]
 # Shared
-kotlin-inject-runtime = { group="me.tatarka.inject", name="kotlin-inject-runtime", version.ref = "kotlinInject"}
-kotlin-inject-compiler = { group="me.tatarka.inject", name="kotlin-inject-compiler-ksp", version.ref = "kotlinInject"}
+kotlin-inject-runtime = { group = "me.tatarka.inject", name = "kotlin-inject-runtime", version.ref = "kotlinInject" }
+kotlin-inject-compiler = { group = "me.tatarka.inject", name = "kotlin-inject-compiler-ksp", version.ref = "kotlinInject" }
 voyager-navigator = { group = "cafe.adriel.voyager", name = "voyager-navigator", version.ref = "voyager" }
 voyager-bottomsheet-navigator = { group = "cafe.adriel.voyager", name = "voyager-bottom-sheet-navigator", version.ref = "voyager" }
 voyager-transitions = { group = "cafe.adriel.voyager", name = "voyager-transitions", version.ref = "voyager" }

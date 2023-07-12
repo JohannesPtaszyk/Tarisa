@@ -17,12 +17,12 @@ kotlin {
 
 android {
     compileSdk = libs.versions.androidCompileSdk.get().toInt()
-    namespace = "dev.pott"
+    namespace = "dev.pott.tarisa"
 
     sourceSets["main"].manifest.srcFile("src/androidMain/AndroidManifest.xml")
 
     defaultConfig {
-        applicationId = "com.myapplication.MyApplication"
+        applicationId = "dev.pott.focus"
         minSdk = libs.versions.androidMinSdk.get().toInt()
         targetSdk = libs.versions.androidTargetSdk.get().toInt()
         versionCode = 1
@@ -37,5 +37,5 @@ android {
     }
 }
 dependencies {
-    implementation("androidx.appcompat:appcompat:1.6.1")
+    implementation(libs.androidx.app.compat)
 }
