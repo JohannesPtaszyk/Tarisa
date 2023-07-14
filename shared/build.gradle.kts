@@ -24,16 +24,18 @@ kotlin {
         framework {
             baseName = "shared"
             isStatic = true
+            binaryOption("bundleId", "dev.pott.tarisa.shared")
         }
         extraSpecAttributes["resources"] = "['src/commonMain/resources/**', 'src/iosMain/resources/**']"
     }
 
+    @Suppress("UNUSED_VARIABLE")
     sourceSets {
         val commonMain by getting {
             dependencies {
                 implementation(compose.runtime)
                 implementation(compose.foundation)
-                implementation(compose.material)
+                implementation(compose.material3)
                 @OptIn(org.jetbrains.compose.ExperimentalComposeLibrary::class)
                 implementation(compose.components.resources)
                 implementation(libs.kotlin.inject.runtime)
@@ -73,8 +75,8 @@ dependencies {
         "kspIosX64",
         "kspIosArm64",
         "kspIosSimulatorArm64"
-    ).forEach {
-        add(it, libs.kotlin.inject.compiler)
+    ).forEach { ksp ->
+        add(ksp, libs.kotlin.inject.compiler)
     }
 }
 

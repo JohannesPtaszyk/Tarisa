@@ -1,5 +1,3 @@
-import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
-
 plugins {
     `kotlin-dsl`
 }
@@ -12,8 +10,26 @@ java {
     sourceCompatibility = JavaVersion.VERSION_17
     targetCompatibility = JavaVersion.VERSION_17
 }
-tasks.withType<KotlinCompile>().configureEach {
-    kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_17.toString()
-    }
+
+kotlin {
+    jvmToolchain(17)
 }
+
+dependencies {
+    compileOnly(libs.kotlin.multiplatform.plugin)
+    compileOnly(libs.kotlin.jvm.plugin)
+    compileOnly(libs.kotlin.android.plugin)
+    compileOnly(libs.kotlin.cocoapods.plugin)
+    compileOnly(libs.compose.plugin)
+    compileOnly(libs.ksp.plugin)
+    compileOnly(libs.android.plugin)
+}
+
+//gradlePlugin {
+//    plugins {
+//        register("composeLibraryPlugin") {
+//            id = "dev.pott.tarisa.compose"
+//            implementationClass = "ComposeMultiplatformLibraryConventionPlugin"
+//        }
+//    }
+//}

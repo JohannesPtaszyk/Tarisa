@@ -12,11 +12,10 @@ kotlinInject = "0.6.1"
 androidMinSdk = "24"
 androidTargetSdk = "33"
 androidCompileSdk = "33"
-androidGradlePlugin = "7.4.2"
+androidGradlePlugin = "8.0.2"
 androidxActivityCompose = "1.7.2"
 androidxAppCompat = "1.6.1"
 androidxCoreKtx = "1.10.1"
-androidGradle = "8.0.2"
 
 # Desktop
 
@@ -40,6 +39,15 @@ androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = 
 
 # iOS
 
+#Gradle Plugins
+kotlin-multiplatform-plugin = { group = "org.jetbrains.kotlin.multiplatform", name = "org.jetbrains.kotlin.multiplatform.gradle.plugin", version.ref = "kotlin" }
+kotlin-jvm-plugin = { group = "org.jetbrains.kotlin.jvm", name = "org.jetbrains.kotlin.jvm.gradle.plugin", version.ref = "kotlin" }
+kotlin-android-plugin = { group = "org.jetbrains.kotlin.android", name = "org.jetbrains.kotlin.android.gradle.plugin", version.ref = "kotlin" }
+kotlin-cocoapods-plugin = { group = "org.jetbrains.kotlin.native.cocoapods", name = "org.jetbrains.kotlin.native.cocoapods.gradle.plugin", version.ref = "kotlin" }
+compose-plugin = { group = "org.jetbrains.compose", name = "org.jetbrains.compose.gradle.plugin", version.ref = "composeGradle" }
+ksp-plugin = { group = "com.google.devtools.ksp", name = "com.google.devtools.ksp.gradle.plugin", version.ref = "ksp" }
+android-plugin = { group = "com.android.tools.build", name = "gradle", version.ref = "androidGradlePlugin" }
+
 [plugins]
 # Shared
 kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
@@ -49,8 +57,8 @@ compose = { id = "org.jetbrains.compose", version.ref = "composeGradle" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 
 # Android
-android-library = { id = "com.android.library", version.ref = "androidGradle" }
-android-application = { id = "com.android.application", version.ref = "androidGradle" }
+android-library = { id = "com.android.library", version.ref = "androidGradlePlugin" }
+android-application = { id = "com.android.application", version.ref = "androidGradlePlugin" }
 
 # Desktop
 
