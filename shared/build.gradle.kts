@@ -41,7 +41,9 @@ kotlin {
                 implementation(libs.kotlin.inject.runtime)
                 implementation(libs.voyager.bottomsheet.navigator)
                 implementation(libs.voyager.navigator)
+                implementation(libs.voyager.navigator.tab)
                 implementation(libs.voyager.transitions)
+                implementation(libs.material3.window.size)
             }
         }
         val androidMain by getting {

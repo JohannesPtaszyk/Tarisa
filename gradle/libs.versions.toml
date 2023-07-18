@@ -7,6 +7,7 @@ composeCompiler = "1.4.8"
 ksp = "1.8.20-1.0.10"
 voyager = "1.0.0-rc06"
 kotlinInject = "0.6.1"
+windowSize = "0.2.0"
 
 # Android
 androidMinSdk = "24"
@@ -29,6 +30,9 @@ kotlin-inject-compiler = { group = "me.tatarka.inject", name = "kotlin-inject-co
 voyager-navigator = { group = "cafe.adriel.voyager", name = "voyager-navigator", version.ref = "voyager" }
 voyager-bottomsheet-navigator = { group = "cafe.adriel.voyager", name = "voyager-bottom-sheet-navigator", version.ref = "voyager" }
 voyager-transitions = { group = "cafe.adriel.voyager", name = "voyager-transitions", version.ref = "voyager" }
+voyager-navigator-tab = { group = "cafe.adriel.voyager", name = "voyager-tab-navigator", version.ref = "voyager" }
+material3-window-size = { group = "dev.chrisbanes.material3", name = "material3-window-size-class-multiplatform", version.ref = "windowSize"}
+
 
 # Android
 androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "androidxActivityCompose" }
