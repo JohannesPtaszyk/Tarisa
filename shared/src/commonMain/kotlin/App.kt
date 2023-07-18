@@ -96,16 +96,16 @@ private fun rememberNavigationType(): State<NavigationType> {
     return remember(windowSizeClass) {
         derivedStateOf {
             when {
+                windowSizeClass.widthSizeClass == WindowWidthSizeClass.Expanded -> {
+                    NavigationType.DRAWER
+                }
+
                 windowSizeClass.widthSizeClass == WindowWidthSizeClass.Medium || windowSizeClass.heightSizeClass == WindowHeightSizeClass.Compact -> {
                     NavigationType.RAIL
                 }
 
                 windowSizeClass.widthSizeClass == WindowWidthSizeClass.Compact -> {
                     NavigationType.BOTTOM
-                }
-
-                windowSizeClass.widthSizeClass == WindowWidthSizeClass.Expanded -> {
-                    NavigationType.DRAWER
                 }
 
                 else -> {
