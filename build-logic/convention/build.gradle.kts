@@ -25,11 +25,11 @@ dependencies {
     compileOnly(libs.android.plugin)
 }
 
-//gradlePlugin {
-//    plugins {
-//        register("composeLibraryPlugin") {
-//            id = "dev.pott.tarisa.compose"
-//            implementationClass = "ComposeMultiplatformLibraryConventionPlugin"
-//        }
-//    }
-//}
+gradlePlugin {
+    plugins {
+        register("ComposeMultiplatformLibraryConventionPlugin") {
+            id = "dev.pott.compose.convention"
+            implementationClass = "ComposeMultiplatformLibraryConventionPlugin"
+        }
+    }
+}

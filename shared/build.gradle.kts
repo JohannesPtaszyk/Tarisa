@@ -44,6 +44,7 @@ kotlin {
                 implementation(libs.voyager.navigator.tab)
                 implementation(libs.voyager.transitions)
                 implementation(libs.material3.window.size)
+                implementation(projects.design.theme)
             }
         }
         val androidMain by getting {
@@ -98,8 +99,5 @@ android {
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
-    }
-    kotlin {
-        jvmToolchain(17)
     }
 }

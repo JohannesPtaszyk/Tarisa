@@ -4,6 +4,8 @@ rootProject.name = "Tarisa"
 include(":androidApp")
 include(":shared")
 include(":desktopApp")
+include(":design:theme")
+
 
 pluginManagement {
     includeBuild("build-logic")
