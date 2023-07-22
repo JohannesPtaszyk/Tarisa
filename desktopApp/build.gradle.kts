@@ -1,8 +1,7 @@
 import org.jetbrains.compose.desktop.application.dsl.TargetFormat
 
 plugins {
-    id(libs.plugins.kotlin.multiplatform.get().pluginId)
-    id(libs.plugins.compose.get().pluginId)
+    id("dev.pott.desktop.app.convention")
 }
 
 kotlin {

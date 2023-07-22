@@ -1,17 +1,14 @@
 package navigation.tabs
 
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.rounded.Home
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.vector.rememberVectorPainter
-import cafe.adriel.voyager.navigator.LocalNavigator
 import cafe.adriel.voyager.navigator.tab.Tab
 import cafe.adriel.voyager.navigator.tab.TabOptions
 import design.AppIcons
 
-object HomeTab: Tab {
+object HomeTab : Tab {
 
     @Composable
     override fun Content() {
@@ -20,5 +17,5 @@ object HomeTab: Tab {
 
     override val options: TabOptions
         @Composable
-        get() = TabOptions(0u,"Home", rememberVectorPainter(AppIcons.Home))
+        get() = TabOptions(0u, "Home", rememberVectorPainter(AppIcons.Home))
 }

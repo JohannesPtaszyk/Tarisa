@@ -1,7 +1,4 @@
 plugins {
-    id(libs.plugins.kotlin.multiplatform.get().pluginId)
-    id(libs.plugins.android.library.get().pluginId)
-    id(libs.plugins.compose.get().pluginId)
     id("dev.pott.compose.convention")
 }
 

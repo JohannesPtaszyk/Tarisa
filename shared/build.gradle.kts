@@ -1,20 +1,10 @@
 plugins {
-    id(libs.plugins.kotlin.multiplatform.get().pluginId)
     id(libs.plugins.cocoapods.get().pluginId)
-    id(libs.plugins.android.library.get().pluginId)
     id(libs.plugins.ksp.get().pluginId)
-    id(libs.plugins.compose.get().pluginId)
+    id("dev.pott.compose.convention")
 }
 
 kotlin {
-    android()
-
-    jvm("desktop")
-
-    iosX64()
-    iosArm64()
-    iosSimulatorArm64()
-
     cocoapods {
         version = "1.0.0"
         summary = "Tarisa App"
@@ -54,15 +44,6 @@ kotlin {
                 api(libs.androidx.core.ktx)
             }
         }
-        val iosX64Main by getting
-        val iosArm64Main by getting
-        val iosSimulatorArm64Main by getting
-        val iosMain by creating {
-            dependsOn(commonMain)
-            iosX64Main.dependsOn(this)
-            iosArm64Main.dependsOn(this)
-            iosSimulatorArm64Main.dependsOn(this)
-        }
         val desktopMain by getting {
             dependencies {
                 implementation(compose.desktop.common)
@@ -77,7 +58,7 @@ dependencies {
         "kspAndroid",
         "kspIosX64",
         "kspIosArm64",
-        "kspIosSimulatorArm64"
+        "kspIosSimulatorArm64",
     ).forEach { ksp ->
         add(ksp, libs.kotlin.inject.compiler)
     }
@@ -91,13 +72,4 @@ android {
     sourceSets["main"].manifest.srcFile("src/androidMain/AndroidManifest.xml")
     sourceSets["main"].res.srcDirs("src/androidMain/res")
     sourceSets["main"].resources.srcDirs("src/commonMain/resources")
-
-    defaultConfig {
-        minSdk = libs.versions.androidMinSdk.get().toInt()
-        targetSdk = libs.versions.androidTargetSdk.get().toInt()
-    }
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_17
-        targetCompatibility = JavaVersion.VERSION_17
-    }
 }

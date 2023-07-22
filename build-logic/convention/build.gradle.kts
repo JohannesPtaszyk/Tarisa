@@ -31,5 +31,13 @@ gradlePlugin {
             id = "dev.pott.compose.convention"
             implementationClass = "ComposeMultiplatformLibraryConventionPlugin"
         }
+        register("AndroidAppConventionPlugin") {
+            id = "dev.pott.android.app.convention"
+            implementationClass = "AndroidAppConventionPlugin"
+        }
+        register("DesktopAppConventionPlugin") {
+            id = "dev.pott.desktop.app.convention"
+            implementationClass = "DesktopAppConventionPlugin"
+        }
     }
 }
