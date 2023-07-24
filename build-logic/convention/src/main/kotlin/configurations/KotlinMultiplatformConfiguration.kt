@@ -12,8 +12,6 @@ import org.jetbrains.kotlin.gradle.dsl.KotlinMultiplatformExtension
 
 fun Project.configureKotlinMultiplatform() {
     extensions.configure<KotlinMultiplatformExtension> {
-        jvmToolchain(17)
-
         android()
 
         jvm("desktop")
