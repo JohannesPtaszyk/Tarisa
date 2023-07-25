@@ -17,7 +17,7 @@ androidGradlePlugin = "8.0.2"
 androidxActivityCompose = "1.7.2"
 androidxAppCompat = "1.6.1"
 androidxCoreKtx = "1.10.1"
-androidDesugarJdkLibs = "1.2.2"
+androidDesugarJdkLibs = "2.0.3"
 
 # Desktop
 
