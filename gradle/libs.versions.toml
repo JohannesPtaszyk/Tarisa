@@ -2,7 +2,7 @@
 # Shared
 kotlin = "1.8.20"
 compose = "1.4.1"
-composeGradle = "1.4.1"
+composeGradle = "1.4.3"
 composeCompiler = "1.4.8"
 ksp = "1.8.20-1.0.10"
 voyager = "1.0.0-rc06"
