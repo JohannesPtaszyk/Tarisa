@@ -1,6 +1,7 @@
 [versions]
 # Shared
 kotlin = "1.8.20"
+coroutines = "1.7.2"
 compose = "1.4.1"
 composeGradle = "1.4.1"
 composeCompiler = "1.4.8"
@@ -26,13 +27,15 @@ iosDevelopmentTarget = "14.1"
 
 [libraries]
 # Shared
+kotlin-coroutines-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "coroutines" }
 kotlin-inject-runtime = { group = "me.tatarka.inject", name = "kotlin-inject-runtime", version.ref = "kotlinInject" }
 kotlin-inject-compiler = { group = "me.tatarka.inject", name = "kotlin-inject-compiler-ksp", version.ref = "kotlinInject" }
+voyager-core = { group = "cafe.adriel.voyager", name = "voyager-core", version.ref = "voyager" }
 voyager-navigator = { group = "cafe.adriel.voyager", name = "voyager-navigator", version.ref = "voyager" }
 voyager-bottomsheet-navigator = { group = "cafe.adriel.voyager", name = "voyager-bottom-sheet-navigator", version.ref = "voyager" }
 voyager-transitions = { group = "cafe.adriel.voyager", name = "voyager-transitions", version.ref = "voyager" }
 voyager-navigator-tab = { group = "cafe.adriel.voyager", name = "voyager-tab-navigator", version.ref = "voyager" }
-material3-window-size = { group = "dev.chrisbanes.material3", name = "material3-window-size-class-multiplatform", version.ref = "windowSize"}
+material3-window-size = { group = "dev.chrisbanes.material3", name = "material3-window-size-class-multiplatform", version.ref = "windowSize" }
 
 
 # Android
@@ -40,8 +43,10 @@ androidx-activity-compose = { group = "androidx.activity", name = "activity-comp
 androidx-app-compat = { group = "androidx.appcompat", name = "appcompat", version.ref = "androidxAppCompat" }
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "androidxCoreKtx" }
 android-desugarJdkLibs = { group = "com.android.tools", name = "desugar_jdk_libs", version.ref = "androidDesugarJdkLibs" }
+kotlin-coroutines-android = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "coroutines" }
 
 # Desktop
+kotlin-coroutines-swing = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-swing", version.ref = "coroutines" }
 
 # iOS
 

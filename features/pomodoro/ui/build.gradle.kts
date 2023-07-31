@@ -8,14 +8,14 @@ kotlin {
         val commonMain by getting {
             dependencies {
                 implementation(compose.runtime)
-                implementation(compose.material) // Somehow needed to build iOS, could not figure out why so far
-                implementation(compose.materialIconsExtended)
                 implementation(compose.material3)
+                implementation(libs.voyager.core)
+                implementation(projects.architecture.ui)
             }
         }
     }
 }
 
 android {
-    namespace = "dev.pott.tarisa.design.theme"
+    namespace = "dev.pott.tarisa.features.pomodoro.data"
 }

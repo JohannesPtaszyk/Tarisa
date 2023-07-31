@@ -35,6 +35,8 @@ kotlin {
                 implementation(libs.voyager.transitions)
                 implementation(libs.material3.window.size)
                 implementation(projects.design.theme)
+                implementation(projects.features.pomodoro.ui)
+                implementation(projects.architecture.ui)
             }
         }
         val androidMain by getting {
@@ -42,11 +44,13 @@ kotlin {
                 api(libs.androidx.activity.compose)
                 api(libs.androidx.app.compat)
                 api(libs.androidx.core.ktx)
+                api(libs.kotlin.coroutines.android)
             }
         }
         val desktopMain by getting {
             dependencies {
                 implementation(compose.desktop.common)
+                implementation(libs.kotlin.coroutines.swing)
             }
         }
     }

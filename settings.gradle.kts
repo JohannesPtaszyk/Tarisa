@@ -5,6 +5,9 @@ include(":androidApp")
 include(":shared")
 include(":desktopApp")
 include(":design:theme")
+include(":architecture:ui")
+include(":features:pomodoro:ui")
+
 
 
 pluginManagement {
