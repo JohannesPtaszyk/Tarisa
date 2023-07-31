@@ -8,7 +8,7 @@ kotlin {
         val commonMain by getting {
             dependencies {
                 implementation(compose.runtime)
-                implementation(compose.material) // Somehow needed to build iOS, could not figure out why so far
+                implementation(compose.material) // iOS workaround
                 implementation(compose.materialIconsExtended)
                 implementation(compose.material3)
             }

@@ -5,13 +5,9 @@ import ANDROID_MIN_SDK_ALIAS
 import COMPOSE_COMPILER_ALIAS
 import com.android.build.api.dsl.CommonExtension
 import extensions.libs
-import projectJavaVersion
 import org.gradle.api.Project
-import org.gradle.kotlin.dsl.configure
 import org.gradle.kotlin.dsl.dependencies
-import org.jetbrains.kotlin.gradle.dsl.KotlinMultiplatformExtension
-import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
-import kotlin.jvm.internal.Intrinsics.Kotlin
+import projectJavaVersion
 
 fun Project.configureAndroidCompose(
     commonExtension: CommonExtension<*, *, *, *>
