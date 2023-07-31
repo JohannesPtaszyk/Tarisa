@@ -10,6 +10,7 @@ kotlin {
                 implementation(compose.runtime)
                 implementation(libs.voyager.core)
                 implementation(libs.kotlin.coroutines.core)
+                implementation(libs.kotlin.compose.runtime.savable) // iOS workaround
             }
         }
     }
