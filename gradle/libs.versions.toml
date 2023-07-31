@@ -1,10 +1,9 @@
 [versions]
 # Shared
 kotlin = "1.9.0"
-coroutines = "1.7.3"
-compose = "1.4.1"
-composeGradle = "1.4.1"
-composeCompiler = "1.4.8"
+coroutines = "1.7.2"
+composeGradle = "1.4.3"
+composeCompiler = "1.5.1"
 ksp = "1.9.0-1.0.12"
 voyager = "1.0.0-rc06"
 kotlinInject = "0.6.1"
@@ -62,16 +61,16 @@ android-plugin = { group = "com.android.tools.build", name = "gradle", version.r
 [plugins]
 # Shared
 kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
-kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 compose = { id = "org.jetbrains.compose", version.ref = "composeGradle" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 
 # Android
 android-library = { id = "com.android.library", version.ref = "androidGradlePlugin" }
 android-application = { id = "com.android.application", version.ref = "androidGradlePlugin" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 
 # Desktop
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 
 # iOS
 cocoapods = { id = "org.jetbrains.kotlin.native.cocoapods", version.ref = "kotlin" }
