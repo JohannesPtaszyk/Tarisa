@@ -10,11 +10,11 @@ import org.gradle.kotlin.dsl.dependencies
 import projectJavaVersion
 
 fun Project.configureAndroidCompose(
-    commonExtension: CommonExtension<*, *, *, *>
+    commonExtension: CommonExtension<*, *, *, *, *>
 ) {
     configureAndroid(commonExtension)
     commonExtension.apply {
-        @Suppress("UnstableApiUsage") buildFeatures {
+        buildFeatures {
             compose = true
         }
 
@@ -25,7 +25,7 @@ fun Project.configureAndroidCompose(
     }
 }
 
-fun Project.configureAndroid(commonExtension: CommonExtension<*, *, *, *>) {
+fun Project.configureAndroid(commonExtension: CommonExtension<*, *, *, *, *>) {
     commonExtension.apply {
         compileSdk = libs.findVersion(ANDROID_COMPILE_SDK_ALIAS).get().toString().toInt()
         defaultConfig {
