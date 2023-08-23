@@ -1,4 +1,4 @@
-package design
+package design.theme
 
 import androidx.compose.material.icons.Icons
 

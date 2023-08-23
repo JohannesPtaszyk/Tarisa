@@ -17,6 +17,7 @@ androidGradlePlugin = "8.1.0"
 androidxActivityCompose = "1.7.2"
 androidxAppCompat = "1.6.1"
 androidxCoreKtx = "1.10.1"
+androidxWork = "2.8.1"
 androidDesugarJdkLibs = "2.0.3"
 
 # Desktop
@@ -42,6 +43,7 @@ material3-window-size = { group = "dev.chrisbanes.material3", name = "material3-
 androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "androidxActivityCompose" }
 androidx-app-compat = { group = "androidx.appcompat", name = "appcompat", version.ref = "androidxAppCompat" }
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "androidxCoreKtx" }
+androidx-work-ktx = { group = "androidx.work" , name = "work-runtime-ktx", version.ref = "androidxWork"}
 android-desugarJdkLibs = { group = "com.android.tools", name = "desugar_jdk_libs", version.ref = "androidDesugarJdkLibs" }
 kotlin-coroutines-android = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "coroutines" }
 

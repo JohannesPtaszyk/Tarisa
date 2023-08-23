@@ -25,7 +25,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import cafe.adriel.voyager.navigator.tab.CurrentTab
 import cafe.adriel.voyager.navigator.tab.TabNavigator
-import design.AppTheme
+import design.theme.AppTheme
 import navigation.BottomBarItem
 import navigation.DrawerItem
 import navigation.RailItem

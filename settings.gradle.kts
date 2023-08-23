@@ -4,8 +4,14 @@ rootProject.name = "Tarisa"
 include(":androidApp")
 include(":shared")
 include(":desktopApp")
-include(":design:theme")
-include(":architecture:ui")
+include(
+    ":design:theme",
+    ":design:components"
+)
+include(
+    ":architecture:ui",
+    ":architecture:background"
+)
 include(":features:pomodoro:ui")
 
 
