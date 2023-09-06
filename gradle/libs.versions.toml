@@ -16,7 +16,7 @@ androidCompileSdk = "33"
 androidGradlePlugin = "8.1.0"
 androidxActivityCompose = "1.7.2"
 androidxAppCompat = "1.6.1"
-androidxCoreKtx = "1.10.1"
+androidxCoreKtx = "1.12.0"
 androidxWork = "2.8.1"
 androidDesugarJdkLibs = "2.0.3"
 
