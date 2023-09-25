@@ -6,7 +6,7 @@ composeMultiplatform = "1.5.2"
 composeCompiler = "1.5.1"
 ksp = "1.9.0-1.0.13"
 voyager = "1.0.0-rc07"
-kotlinInject = "0.6.1"
+kotlinInject = "0.6.3"
 windowSize = "0.3.1"
 
 # Android
