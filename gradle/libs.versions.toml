@@ -1,6 +1,6 @@
 [versions]
 # Shared
-kotlin = "1.9.0"
+kotlin = "1.9.10"
 coroutines = "1.7.3"
 composeMultiplatform = "1.5.2"
 composeCompiler = "1.5.1"
