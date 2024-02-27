@@ -2,7 +2,7 @@
 # Shared
 kotlin = "1.9.10"
 coroutines = "1.8.0"
-composeMultiplatform = "1.5.2"
+composeMultiplatform = "1.6.0"
 composeCompiler = "1.5.1"
 ksp = "1.9.10-1.0.13"
 voyager = "1.0.0-rc07"
